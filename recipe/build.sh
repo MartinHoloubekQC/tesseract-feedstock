@@ -5,7 +5,7 @@ pushd tesseract
 autoreconf -vi
 ./autogen.sh
 mkdir build && cd build
-../configure --prefix="${PREFIX}"
+../configure --prefix="${PREFIX}" --disable-shared --disable-openmp
 make -j $CPU_COUNT
 make install
 popd
